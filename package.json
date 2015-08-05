@@ -1,0 +1,11 @@
+{
+  "name": "sampleLoanTests",
+  "scripts": {
+    "protractor-install": "npm install protractor && ./node_modules/protractor/bin/webdriver-manager update",
+    "protractor-tests": "./node_modules/protractor/bin/protractor config/protractor-config.js",
+    "protractor-sauce-tests": "./node_modules/protractor/bin/protractor config/protractor-sauce-config.js"
+  },
+  "devDependencies": {
+    "protractor-html-screenshot-reporter": "0.0.20"
+  }
+}
