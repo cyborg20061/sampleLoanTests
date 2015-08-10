@@ -2,9 +2,10 @@
 var HtmlReporter = require('protractor-html-screenshot-reporter');
 
 exports.config = {
-    allScriptsTimeout: 11000,
+    allScriptsTimeout: 30000,
     suites: {
-        checkRate: '../check-rate-spec.js'
+        checkRate: '../check-rate-spec.js',
+        studentLoanApplication: '../student-loan-application-spec.js'
     },
     maxSessions: -1,
     capabilities: {
@@ -14,8 +15,15 @@ exports.config = {
         maxInstances: 1
     },
     multiCapabilities: [],
-    baseUrl: 'http://localhost:9000',
-    //baseUrl: 'http://www.staging.meetearnest.com',
+    framework: 'jasmine',
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 100000,
+        onComplete: null,
+        isVerbose: false,
+        showColors: true,
+        includeStackTrace: true
+    },
+    baseUrl: 'https://localhost:9000',
     rootElement: 'div',
     onPrepare: function() {
         jasmine.getEnv().addReporter(new HtmlReporter({

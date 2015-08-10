@@ -22,6 +22,19 @@ module.exports = {
     getElementByIdAndType: function (locator, text) {
         return element(by.id(locator)).sendKeys(text);
     },
+    waitForElement : function(locator){
+    browser.driver.wait(function() {
+        return browser.driver.isElementPresent(locator);
+    },10000);
+},
+    logout : function() {
+        element(by.css('.dropdown-icon')).click();
+        return element(by.css('[ng-click="nav.logout"]')).click();
+    },
+
+    clickCheckboxOption : function(option) {
+        return browser.findElement(By.xpath("//label[contains(.,\'" + option + "\')]")).click()
+    }
 };
 
 
