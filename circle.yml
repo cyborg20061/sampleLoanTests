@@ -17,5 +17,4 @@ checkout:
   post:
     - git submodule sync
     - git submodule update --init
-    - cd ui_automation_copy
-    - mv circle.yml ../circle.yml
+    - mv  ui_automation_copy/circle.yml circle.yml
