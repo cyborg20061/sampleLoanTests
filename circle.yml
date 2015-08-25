@@ -17,4 +17,4 @@ checkout:
   post:
     - git submodule sync
     - git submodule update --init
-    - cd ui_automation
+    - cd ui_automation_copy
