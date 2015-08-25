@@ -11,4 +11,4 @@ database:
 
 test:
   override:
-    - npm run protractor-tests ;; esac:
+    - npm run protractor-tests
