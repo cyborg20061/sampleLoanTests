@@ -1,0 +1,3 @@
+[submodule "ui_automation_copy"]
+	path = ui_automation_copy
+	url = git@github.com:meaghanlewis/ui_automation_copy.git

@@ -4,8 +4,8 @@ var HtmlReporter = require('protractor-html-screenshot-reporter');
 exports.config = {
     allScriptsTimeout: 30000,
     suites: {
-        checkRate: '../check-rate-spec.js',
-        studentLoanApplication: '../student-loan-application-spec.js'
+        checkRate: '../sample-test-spec.js',
+        //studentLoanApplication: '../student-loan-application-spec.js'
     },
     maxSessions: -1,
     capabilities: {
@@ -23,7 +23,7 @@ exports.config = {
         showColors: true,
         includeStackTrace: true
     },
-    baseUrl: 'https://localhost:9000',
+    //baseUrl: 'https://localhost:9000',
     rootElement: 'div',
     onPrepare: function() {
         jasmine.getEnv().addReporter(new HtmlReporter({

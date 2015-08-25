@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 0.10.40
+
+
+database:
+  override:
+    - createuser -U postgres -S -D -R earnest
+    - createdb -U postgres -O earnest earnest_test
+    - for i in `ls config/*.example.js`; do cp $i `echo $i | sed "s/example/test/g"`; done
+
+test:
+  override:
+    - npm run protractor-tests ;; esac:
