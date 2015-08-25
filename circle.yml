@@ -12,3 +12,8 @@ database:
 test:
   override:
     - npm run protractor-tests
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
