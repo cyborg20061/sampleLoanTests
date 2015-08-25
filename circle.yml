@@ -12,9 +12,11 @@ database:
 test:
   override:
     - npm run protractor-tests
+  commands:
+    - ./runSelenium.sh
+
 
 checkout:
   post:
     - git submodule sync
     - git submodule update --init
-    - mv  ui_automation_copy/circle.yml circle.yml
