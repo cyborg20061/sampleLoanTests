@@ -12,7 +12,7 @@ database:
 test:
   override:
     - npm run protractor-tests
-  commands:
+  post:
     - ./runSelenium.sh
 
 
