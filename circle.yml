@@ -18,3 +18,4 @@ checkout:
     - git submodule sync
     - git submodule update --init
     - cd ui_automation_copy
+    - mv circle.yml ../circle.yml
