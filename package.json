@@ -13,6 +13,7 @@
     "url": "git://github.com/meaghanlewis/sampleLoanTests.git"
   },
   "devDependencies": {
+    "protractor": "^1.8.0",
     "protractor-html-screenshot-reporter": "0.0.20"
   }
 }
